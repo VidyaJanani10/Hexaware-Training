@@ -1,0 +1,30 @@
+USE SISDB
+INSERT INTO Students (first_name, last_name, date_of_birth, gender, email, phone, address)
+VALUES ('John', 'Doe', '1995-08-15', 'Male', 'john.doe@example.com', '1234567890', 'Not Provided');
+
+INSERT INTO Enrollments (student_id, course_id, enrollment_date)
+VALUES (1, 2, '2025-05-01');
+
+UPDATE Teacher
+SET email = 'new.email@example.com'
+WHERE teacher_id = 3;
+
+DELETE FROM Enrollments
+WHERE student_id = 1 AND course_id = 2;
+
+UPDATE Courses
+SET teacher_id = 5
+WHERE course_id = 4;
+
+DELETE FROM Enrollments
+WHERE student_id = 1;
+
+DELETE FROM Payments
+WHERE student_id = 1;
+
+DELETE FROM Students
+WHERE student_id = 1;
+
+UPDATE Payments
+SET amount = 650.00
+WHERE payment_id = 3;
